@@ -7,6 +7,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+    /* RAMADAN FLYER - Inline styles for reliability */
+    .specials{padding:4rem 1rem;background:linear-gradient(180deg,#1a4d3a 0%,#153d2e 50%,#0f2d22 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .specials .sparkle{position:absolute;width:8px;height:8px;background:#ffd700;border-radius:50%;box-shadow:0 0 10px #ffd700,0 0 20px #ffd700;animation:sparkleAnim 2s ease-in-out infinite}
+    .specials .s1{top:8%;left:6%;animation-delay:0s}.specials .s2{top:12%;right:8%;animation-delay:.4s}.specials .s3{top:35%;left:4%;animation-delay:.8s}.specials .s4{top:55%;right:6%;animation-delay:1.2s}.specials .s5{top:75%;left:8%;animation-delay:1.6s}.specials .s6{top:85%;right:10%;animation-delay:2s}
+    @keyframes sparkleAnim{0%,100%{opacity:.4;transform:scale(.8)}50%{opacity:1;transform:scale(1.3);box-shadow:0 0 15px #ffd700,0 0 30px #ffd700,0 0 45px #ffd700}}
+    .flyer-container{width:100%;max-width:500px;position:relative;z-index:1}
+    .flyer-card{width:100%;border-radius:20px;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.5),0 0 50px rgba(201,162,39,.15)}
+    .gold-frame{background:linear-gradient(135deg,#c9a227 0%,#e8c547 50%,#c9a227 100%);padding:6px;border-radius:20px;position:relative}
+    .gold-frame .corner{position:absolute;width:40px;height:40px;border:3px solid #8b6914;z-index:10}
+    .gold-frame .corner.tl{top:12px;left:12px;border-right:none;border-bottom:none;border-radius:8px 0 0 0}
+    .gold-frame .corner.tr{top:12px;right:12px;border-left:none;border-bottom:none;border-radius:0 8px 0 0}
+    .gold-frame .corner.bl{bottom:12px;left:12px;border-right:none;border-top:none;border-radius:0 0 0 8px}
+    .gold-frame .corner.br{bottom:12px;right:12px;border-left:none;border-top:none;border-radius:0 0 8px 0}
+    .flyer-header{background:linear-gradient(180deg,#1a4d3a 0%,#236b4e 100%);padding:1rem 1.5rem .5rem;display:flex;justify-content:center;align-items:center;gap:.75rem;border-radius:14px 14px 0 0}
+    .flyer-header .header-stars{font-size:1rem;animation:starPulse 1.5s ease-in-out infinite}
+    @keyframes starPulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
+    .flyer-header .mubarak-text{color:#ff6b6b;font-size:1.1rem;font-weight:600;margin:0}
+    .header-main{background:linear-gradient(180deg,#236b4e 0%,#1a4d3a 100%);padding:.75rem 1.5rem 1.5rem;display:flex;justify-content:center;align-items:center;gap:1.5rem}
+    .header-main .moon-icon{font-size:2rem;animation:moonFloat 3s ease-in-out infinite}
+    .header-main .moon-icon.right{animation-delay:1.5s}
+    @keyframes moonFloat{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-6px) rotate(5deg)}}
+    .header-center{text-align:center;color:#fff}
+    .header-center .arabic-text{font-size:1.3rem;color:#ffd700;margin:0 0 .25rem 0}
+    .header-center .ramadan-title{font-size:2rem;font-family:'Playfair Display',Georgia,serif;margin:0 0 .25rem 0;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+    .header-center .date-text{font-size:.95rem;margin:0;opacity:.9}
+    .flyer-content{background:linear-gradient(180deg,#faf7f0 0%,#f5f1e8 100%);padding:1.75rem 1.5rem 2rem;border-radius:0 0 14px 14px}
+    .promo-box{text-align:left;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:2px dashed #c9a227}
+    .promo-box .switch-text{font-size:1rem;color:#1a4d3a;margin:0 0 .5rem 0;font-weight:500}
+    .promo-box .skip-biryani,.promo-box .try-chinese{font-size:1.5rem;font-family:'Playfair Display',Georgia,serif;color:#1a1a1a;margin:0;font-weight:700;line-height:1.3}
+    .promo-box .try-chinese{color:#8B0000;margin-bottom:.5rem}
+    .promo-box .blessed-text{font-size:.95rem;color:#555;margin:0}
+    .ornament-divider{display:flex;align-items:center;justify-content:center;gap:.75rem;margin:1rem 0}
+    .ornament-divider .line{flex:1;height:1px;background:linear-gradient(90deg,transparent,#c9a227,transparent)}
+    .ornament-divider .diamond{color:#c9a227;font-size:1rem}
+    .iftar-box{text-align:center}
+    .iftar-box .iftar-title{font-size:1.5rem;font-family:'Playfair Display',Georgia,serif;color:#8B0000;margin:0 0 .75rem 0;font-weight:700}
+    .iftar-box .iftar-title span{display:inline-block;animation:flameFlicker .5s ease-in-out infinite alternate}
+    @keyframes flameFlicker{0%{transform:scale(1) rotate(-3deg)}100%{transform:scale(1.1) rotate(3deg)}}
+    .iftar-box .choose-text{font-size:1rem;color:#c9a227;font-weight:600;margin:0 0 .75rem 0}
+    .iftar-box .entree-options{font-size:.95rem;color:#333;margin:0 0 1rem 0;line-height:1.5;text-align:left;padding-left:.5rem}
+    .iftar-box .entree-options em{color:#1a4d3a;font-style:italic}
+    .iftar-box .check{color:#1a4d3a;font-weight:700;margin-right:.25rem}
+    .iftar-box .includes{text-align:left;margin-bottom:1rem;padding-left:.5rem}
+    .iftar-box .includes p{font-size:.95rem;color:#333;margin:.4rem 0}
+    .price-divider{display:flex;align-items:center;justify-content:center;gap:.75rem;margin:1rem 0 .5rem}
+    .price-divider .line{width:60px;height:1px;background:#c9a227}
+    .price-divider .only-text{font-size:.9rem;color:#666}
+    .iftar-box .price-tag{font-size:3.5rem;font-family:'Playfair Display',Georgia,serif;font-weight:700;color:#1a4d3a;margin:0;line-height:1;animation:priceBounce 2s ease-in-out infinite}
+    @keyframes priceBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+    .iftar-box .soul-text{font-size:.95rem;color:#666;font-style:italic;margin:.75rem 0 1rem}
+    .hadith-box{background:linear-gradient(135deg,#edeae3,#e5e1d8);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;text-align:center}
+    .hadith-box .hadith-text{font-size:.95rem;font-style:italic;color:#444;margin:0 0 .5rem 0;line-height:1.5}
+    .hadith-box .hadith-source{font-size:.85rem;color:#1a4d3a;font-weight:600;margin:0}
+    .order-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(180deg,#a52a2a 0%,#8B0000 100%);color:#fff;padding:1rem 2rem;border-radius:50px;font-size:1.1rem;font-weight:600;text-decoration:none;box-shadow:0 8px 25px rgba(139,0,0,.4);transition:all .3s;animation:btnPulse 2s ease-in-out infinite}
+    .order-btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(139,0,0,.5)}
+    @keyframes btnPulse{0%,100%{box-shadow:0 8px 25px rgba(139,0,0,.4)}50%{box-shadow:0 8px 35px rgba(139,0,0,.6),0 0 15px rgba(139,0,0,.3)}}
+    .order-btn .phone-icon{font-size:1.2rem}
+    </style>
 </head>
 <body>
     <nav id="navbar">
